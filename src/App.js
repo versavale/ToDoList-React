@@ -12,7 +12,7 @@ this.handleSubmit = this.handleSubmit.bind(this);
 this.handleChange = this.handleChange.bind(this);
   }
   handleSubmit(){
-    const itemsArray = this.state.userInput.split(',');
+    const itemsArray = this.state.userInput.split(', ');
     this.setState({
       toDoList: itemsArray
     });
@@ -26,15 +26,25 @@ this.handleChange = this.handleChange.bind(this);
     const items = this.state.toDoList.map(i => <li>{i}</li>);
     return (
       <div className="App">
+        <h1>My To Do List</h1>
+        <div className="wrapper">
+        <div className="col1">
         <textarea
           onChange={this.handleChange}
           value={this.state.userInput}
           placeholder="Separate items with commas" /><br />
+        < div className="button-wrapper">
         <button onClick={this.handleSubmit}>Create List</button>
-        <h1>My To Do List:</h1>
+        </div>
+        </div>
+        <div className="col2">
+        <div className="todoarea">
           <ul>
             {items}
           </ul>
+        </div>
+        </div>
+      </div>
       </div>
     );
   }
