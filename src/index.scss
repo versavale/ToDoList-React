@@ -33,7 +33,7 @@ textarea {
   margin-top: 20px;
 }
 
-button {
+button{
     background-color: #37C670;
     box-shadow: 0;
     border: none;border: none;
@@ -50,6 +50,30 @@ button {
     &:hover {
       background-color: #1b6338;
     }
+}
+
+.action-wrapper {
+  background-color: red;
+  align-content: flex-end;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+
+.action {
+  position:absolute;
+  right: 0px;
+  height: 50px;
+  width: 100px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 14px;
+  color: white;
+  background-color: #37C670;
+  
+  p {
+  text-align: center;
+  }
 }
 
 .todoarea {

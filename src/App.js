@@ -24,17 +24,18 @@ this.handleChange = this.handleChange.bind(this);
   }
   render() {
     const items = this.state.toDoList.map(i => <li>{i}</li>);
+    const countItems = this.state.toDoList.length;
     return (
       <div className="App">
-        <h1>My To Do List</h1>
+        <h1>My To-Do List</h1>
         <div className="wrapper">
         <div className="col1">
         <textarea
           onChange={this.handleChange}
           value={this.state.userInput}
-          placeholder="Separate items with commas" /><br />
+          placeholder="Add your items here, separated by commas" /><br />
         < div className="button-wrapper">
-        <button onClick={this.handleSubmit}>Create List</button>
+        <button className="create" onClick={this.handleSubmit}>Create List</button>
         </div>
         </div>
         <div className="col2">
@@ -42,6 +43,11 @@ this.handleChange = this.handleChange.bind(this);
           <ul>
             {items}
           </ul>
+        </div>
+        <div className="action-wrapper">
+        <div className="action">
+        <p>To-Do: {countItems}</p>
+        </div>
         </div>
         </div>
       </div>
