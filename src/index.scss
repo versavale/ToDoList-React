@@ -28,13 +28,13 @@ textarea {
 } 
 
 .button-wrapper {
-  text-align: right;
   width: 100%;
   margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 button{
-    background-color: #37C670;
     box-shadow: 0;
     border: none;border: none;
     border-color: none;
@@ -46,14 +46,29 @@ button{
     cursor: pointer;
     outline: inherit;
     transition: all 0.3s ease 0s;
-
-    &:hover {
-      background-color: #1b6338;
-    }
 }
 
+.reset {
+  background-color: rgb(198, 55, 55);
+  grid-column: 1;
+
+  &:hover {
+    background-color: rgb(119, 13, 13);
+  }
+}
+
+.create {
+  background-color: #37C670;
+  grid-column: 2;
+  justify-self: right;
+
+  &:hover {
+    background-color: #1b6338;
+  }
+}
+
+
 .action-wrapper {
-  background-color: red;
   align-content: flex-end;
   width: 100%;
   margin-top: 20px;
@@ -62,22 +77,29 @@ button{
 
 .action {
   position:absolute;
-  right: 0px;
   height: 50px;
   width: 100px;
   border: 1px solid transparent;
-  border-radius: 8px;
   font-size: 14px;
   color: white;
-  background-color: #37C670;
   
   p {
   text-align: center;
   }
 }
 
+.completed {
+  background-color: rgb(16, 148, 27);
+  right: 120px;
+}
+
+.todo {
+  background-color: rgb(209, 33, 86);
+  right: 0px;
+}
+
 .todoarea {
-  border: 2px dashed rgb(182, 179, 179);
+  border: 2px dashed rgb(209, 33, 86);
   border-radius: 6px;
   height: 250px;
   padding: 10px;
@@ -97,7 +119,7 @@ ul li {
 }
 
 ul li::before {
-  color: #37C670;
+  color: rgb(209, 33, 86);
   content: "\2022";
   font-size: 22px;
   padding-right: 10px;
