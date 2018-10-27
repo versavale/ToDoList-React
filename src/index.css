@@ -2,15 +2,16 @@ body {
   font-family: Arial, Helvetica, sans-serif; }
 
 h1 {
-  text-align: center;
-  font-size: 42px;
-  color: #37C670; }
+  color: #b91372;
+  font-family: 'Leckerli One', cursive;
+  font-size: 52px;
+  margin-bottom: 0;
+  text-align: center; }
 
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 100%;
-  margin: 0 200px; }
+  height: 100%; }
 
 .col1, .col2 {
   margin: 50px 20px; }
@@ -43,19 +44,19 @@ button {
   transition: all 0.3s ease 0s; }
 
 .reset {
-  background-color: #c63737;
+  background-color: #ff0022;
   grid-column: 1; }
 
 .reset:hover {
-  background-color: #770d0d; }
+  background-color: #7f0011; }
 
 .create {
-  background-color: #37C670;
+  background-color: #b91372;
   grid-column: 2;
   justify-self: right; }
 
 .create:hover {
-  background-color: #1b6338; }
+  background-color: #4a072d; }
 
 .action-wrapper {
   align-content: flex-end;
@@ -72,18 +73,19 @@ button {
   color: white; }
 
 .action p {
-  text-align: center; }
+  text-align: center;
+  padding-top: 3px; }
 
 .completed {
-  background-color: #10941b;
+  background-color: #011627;
   right: 120px; }
 
 .todo {
-  background-color: #d12156;
+  background-color: #b91372;
   right: 0px; }
 
 .todoarea {
-  border: 2px dashed #d12156;
+  border: 2px dashed #b91372;
   border-radius: 6px;
   height: 250px;
   padding: 10px;
@@ -93,15 +95,8 @@ ul {
   padding: 0;
   margin: 0; }
 
-ul li {
-  color: black;
-  list-style: none;
-  padding: 5px 0;
-  font-size: 20px; }
+.checkbox {
+  margin: 10px auto; }
 
-ul li::before {
-  color: #d12156;
-  content: "\2022";
-  font-size: 22px;
-  padding-right: 10px;
-  vertical-align: middle; }
+.checkbox input {
+  margin-right: 8px; }

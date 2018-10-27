@@ -1,18 +1,26 @@
+$dark-blue: #011627;
+$violet: #b91372;
+$violet-hover: #4a072d;
+$red:#ff0022;
+$red-hover:#7f0011;
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
+  color: $violet;
+  font-family: 'Leckerli One', cursive;
+  font-size: 52px;
+  margin-bottom: 0;
   text-align: center;
-  font-size: 42px;
-  color: #37C670;
 }
 
 .wrapper {
 display: grid;
 grid-template-columns: 1fr 1fr;
 height: 100%;
-margin: 0 200px;
+//margin: 0 200px;
 }
 
 .col1, .col2 {
@@ -20,11 +28,11 @@ margin: 0 200px;
 }
 
 textarea {
-    border-radius: 8px;
-    height: 250px;
-    padding: 10px;
-    resize: none;
-    width: calc(100% - 20px);
+  border-radius: 8px;
+  height: 250px;
+  padding: 10px;
+  resize: none;
+  width: calc(100% - 20px);
 } 
 
 .button-wrapper {
@@ -35,35 +43,35 @@ textarea {
 }
 
 button{
-    box-shadow: 0;
-    border: none;border: none;
-    border-color: none;
-    border-radius: 8px;
-    color: white;
-    font-size: 14px;
-    height: 50px;
-    width: 100px;
-    cursor: pointer;
-    outline: inherit;
-    transition: all 0.3s ease 0s;
+  box-shadow: 0;
+  border: none;border: none;
+  border-color: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  height: 50px;
+  width: 100px;
+  cursor: pointer;
+  outline: inherit;
+  transition: all 0.3s ease 0s;
 }
 
 .reset {
-  background-color: rgb(198, 55, 55);
+  background-color: $red;
   grid-column: 1;
 
   &:hover {
-    background-color: rgb(119, 13, 13);
+    background-color: $red-hover;
   }
 }
 
 .create {
-  background-color: #37C670;
+  background-color: $violet;
   grid-column: 2;
   justify-self: right;
 
   &:hover {
-    background-color: #1b6338;
+    background-color: $violet-hover;
   }
 }
 
@@ -84,22 +92,23 @@ button{
   color: white;
   
   p {
-  text-align: center;
+    text-align: center;
+    padding-top: 3px;
   }
 }
 
 .completed {
-  background-color: rgb(16, 148, 27);
+  background-color: $dark-blue;
   right: 120px;
 }
 
 .todo {
-  background-color: rgb(209, 33, 86);
+  background-color: $violet;
   right: 0px;
 }
 
 .todoarea {
-  border: 2px dashed rgb(209, 33, 86);
+  border: 2px dashed $violet;
   border-radius: 6px;
   height: 250px;
   padding: 10px;
@@ -111,21 +120,10 @@ ul {
   margin: 0;
 }
 
-ul li {
-  color: black;
-  list-style: none;
-  padding: 5px 0;
-  font-size: 20px;
+.checkbox {
+  margin: 10px auto; 
+
+  input {
+    margin-right: 8px;
+  }
 }
-
-ul li::before {
-  color: rgb(209, 33, 86);
-  content: "\2022";
-  font-size: 22px;
-  padding-right: 10px;
-  vertical-align: middle;
-}
-
-
-
-
